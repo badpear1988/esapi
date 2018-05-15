@@ -11,7 +11,7 @@ import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 public class ESUtilDemo {
 	public static void main(String args[]) {
 		//1、判定索引是否存在
-		boolean flag = ESUtil.isExists("yy");
+		boolean flag = ESUtil.isExists("twitter");
 		System.out.println("isExists:" + flag);
 		//2、创建索引
 		flag = ESUtil.createIndex("twitter", 3, 0);

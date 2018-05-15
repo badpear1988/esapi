@@ -9,7 +9,7 @@ import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.transport.TransportAddress;
 import org.elasticsearch.transport.client.PreBuiltTransportClient;
 
-public class clentDemo {
+public class clientDemo {
 	 public static void main(String[] args) throws UnknownHostException {
 	        // 设置集群名称
 	        Settings settings = Settings.builder().put("cluster.name", "elasticsearch").build();
