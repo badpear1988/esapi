@@ -16,11 +16,11 @@ public class createDemo {
 		Settings settings = Settings.builder().put("cluster.name","elasticsearch").build();
 		//2、创建client
 		TransportClient client = new PreBuiltTransportClient(settings)
-				.addTransportAddress(new TransportAddress(InetAddress.getByName("node2"),9300));
+				.addTransportAddress(new TransportAddress(InetAddress.getByName("node1"),9300));
 		//3、获取IndicesAdminClient对象
 		IndicesAdminClient indiceAdminClient = client.admin().indices();
 		//4、创建索引
-		CreateIndexResponse ciResponse = indiceAdminClient.prepareCreate("inde1").get();
+		CreateIndexResponse ciResponse = indiceAdminClient.prepareCreate("index1").get();
 		System.out.println(ciResponse.isAcknowledged());
 	}
 }

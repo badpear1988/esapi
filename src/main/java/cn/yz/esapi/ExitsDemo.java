@@ -15,7 +15,7 @@ public class ExitsDemo {
 		Settings settings = Settings.builder().put("cluster.name","elasticsearch").build();
 		//2、创建client
 		TransportClient client = new PreBuiltTransportClient(settings)
-				.addTransportAddress(new TransportAddress(InetAddress.getByName("node2"),9300));
+				.addTransportAddress(new TransportAddress(InetAddress.getByName("node1"),9300));
 		//3、获取IndicesAdminClient对象
 		IndicesAdminClient indicesAdminClient = client.admin().indices();
 		//4、判断索引是否存在

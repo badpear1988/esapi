@@ -16,7 +16,7 @@ public class ESUtil {
 	//集群名，默认为elasticsearch
 	private static final String CLUSTER_NAME = "elasticsearch";
 	//ES集群中某个节点
-	private static final String HOSTNAME = "node2";
+	private static final String HOSTNAME = "node1";
 	//连接端口号
 	private static final int TCP_PORT = 9300;
 	//构建Settings对象

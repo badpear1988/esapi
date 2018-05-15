@@ -15,7 +15,7 @@ public class clentDemo {
 	        Settings settings = Settings.builder().put("cluster.name", "elasticsearch").build();
 	        // 创建client
 	        TransportClient client = new PreBuiltTransportClient(settings)
-	                    .addTransportAddress(new TransportAddress(InetAddress.getByName("node2"), 9300));
+	                    .addTransportAddress(new TransportAddress(InetAddress.getByName("node1"), 9300));
 	        // 搜索数据
 	        GetResponse response = client.prepareGet("website", "blog", "1").execute().actionGet();
 	        // 输出结果
